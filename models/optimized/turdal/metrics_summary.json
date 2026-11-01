@@ -1,0 +1,878 @@
+{
+  "7d": {
+    "GradientBoosting": {
+      "commodity": "Tur Dal (Latur)",
+      "commodity_key": "turdal",
+      "horizon_days": 7,
+      "algorithm": "GradientBoosting",
+      "model_artifact": "models\\optimized\\turdal\\turdal_gradientboosting_7d.pkl",
+      "trials_csv": "models\\optimized\\turdal\\search_results_gradientboosting_7d.csv",
+      "train_samples": 1073,
+      "holdout_samples": 359,
+      "features_count": 21,
+      "features": [
+        "Temperature_C",
+        "Rainfall_mm",
+        "Arrivals_Tonnes",
+        "Diesel_Price_Rs",
+        "Modal_Price",
+        "Price_Lag_1",
+        "Price_Lag_2",
+        "Price_Lag_3",
+        "Price_Lag_4",
+        "Price_Lag_5",
+        "Price_Lag_7",
+        "Price_Lag_10",
+        "Price_Lag_14",
+        "Price_Lag_21",
+        "Rolling_Mean_3d",
+        "Rolling_Mean_7d",
+        "Rolling_Mean_14d",
+        "Rolling_Std_7d",
+        "Month",
+        "DayOfWeek",
+        "DayOfYear"
+      ],
+      "timestamp": "2026-11-01 17:38:12",
+      "original": {
+        "hyperparameters": {
+          "learning_rate": 0.01,
+          "max_depth": 6,
+          "min_samples_leaf": 1,
+          "min_samples_split": 2,
+          "n_estimators": 400,
+          "subsample": 0.8
+        },
+        "cv_metrics": {
+          "cv_mae_mean": 977.1822061897486,
+          "cv_mae_std": 601.0961388873155,
+          "cv_rmse_mean": 1115.0181188244114,
+          "cv_mape_mean": 11.031178082945559,
+          "cv_r2_mean": -2.4471581019260857,
+          "folds": [
+            {
+              "fold": 1,
+              "train_size": 269,
+              "val_size": 268,
+              "mae": 195.84748498772646,
+              "rmse": 258.6916588528144,
+              "mape": 3.193033814190155,
+              "r2": 0.3538997972980896
+            },
+            {
+              "fold": 2,
+              "train_size": 537,
+              "val_size": 268,
+              "mae": 1077.829063444915,
+              "rmse": 1190.0126534987908,
+              "mape": 14.025607777402884,
+              "r2": -4.743785594096383
+            },
+            {
+              "fold": 3,
+              "train_size": 805,
+              "val_size": 268,
+              "mae": 1657.8700701366042,
+              "rmse": 1896.3500441216295,
+              "mape": 15.874892657243631,
+              "r2": -2.9515885089799645
+            }
+          ]
+        },
+        "holdout_metrics": {
+          "test_mae": 677.9595678631266,
+          "test_rmse": 946.400477918611,
+          "test_mape": 7.251122769150953,
+          "test_r2": 0.29238563126514927
+        }
+      },
+      "optimized": {
+        "hyperparameters": {
+          "learning_rate": 0.08,
+          "max_depth": 5,
+          "max_features": 0.8,
+          "min_samples_leaf": 4,
+          "min_samples_split": 8,
+          "n_estimators": 250,
+          "subsample": 0.95
+        },
+        "cv_metrics": {
+          "cv_mae_mean": 847.3937200142103,
+          "cv_mae_std": 631.8248925468645,
+          "cv_rmse_mean": 1003.9313110521334,
+          "cv_mape_mean": 9.245787933023637,
+          "cv_r2_mean": -1.4825742285003052,
+          "folds": [
+            {
+              "fold": 1,
+              "train_size": 269,
+              "val_size": 268,
+              "mae": 188.5013073520982,
+              "rmse": 255.99292041032163,
+              "mape": 3.095975212205333,
+              "r2": 0.3673100504897183
+            },
+            {
+              "fold": 2,
+              "train_size": 537,
+              "val_size": 268,
+              "mae": 654.1549029659742,
+              "rmse": 807.1676278578474,
+              "mape": 8.373055813538652,
+              "r2": -1.6425458606224943
+            },
+            {
+              "fold": 3,
+              "train_size": 805,
+              "val_size": 268,
+              "mae": 1699.5249497245582,
+              "rmse": 1948.6333848882314,
+              "mape": 16.268332773326925,
+              "r2": -3.172486875368139
+            }
+          ]
+        },
+        "holdout_metrics": {
+          "test_mae": 643.1522465367951,
+          "test_rmse": 909.3845150539571,
+          "test_mape": 6.9518234019460845,
+          "test_r2": 0.3466560847315441
+        }
+      },
+      "improvements": {
+        "cv_mae_pct": 13.28,
+        "holdout_mae_pct": 5.13,
+        "holdout_rmse_pct": 3.91,
+        "holdout_mape_pct": 4.13
+      }
+    },
+    "RandomForest": {
+      "commodity": "Tur Dal (Latur)",
+      "commodity_key": "turdal",
+      "horizon_days": 7,
+      "algorithm": "RandomForest",
+      "model_artifact": "models\\optimized\\turdal\\turdal_randomforest_7d.pkl",
+      "trials_csv": "models\\optimized\\turdal\\search_results_randomforest_7d.csv",
+      "train_samples": 1073,
+      "holdout_samples": 359,
+      "features_count": 21,
+      "features": [
+        "Temperature_C",
+        "Rainfall_mm",
+        "Arrivals_Tonnes",
+        "Diesel_Price_Rs",
+        "Modal_Price",
+        "Price_Lag_1",
+        "Price_Lag_2",
+        "Price_Lag_3",
+        "Price_Lag_4",
+        "Price_Lag_5",
+        "Price_Lag_7",
+        "Price_Lag_10",
+        "Price_Lag_14",
+        "Price_Lag_21",
+        "Rolling_Mean_3d",
+        "Rolling_Mean_7d",
+        "Rolling_Mean_14d",
+        "Rolling_Std_7d",
+        "Month",
+        "DayOfWeek",
+        "DayOfYear"
+      ],
+      "timestamp": "2026-11-01 17:38:21",
+      "original": {
+        "hyperparameters": {
+          "max_depth": 12,
+          "max_features": 1.0,
+          "min_samples_leaf": 1,
+          "min_samples_split": 2,
+          "n_estimators": 300
+        },
+        "cv_metrics": {
+          "cv_mae_mean": 898.2237186791162,
+          "cv_mae_std": 563.7587234547988,
+          "cv_rmse_mean": 1041.1790771088051,
+          "cv_mape_mean": 10.08574420114899,
+          "cv_r2_mean": -1.984967752060327,
+          "folds": [
+            {
+              "fold": 1,
+              "train_size": 269,
+              "val_size": 268,
+              "mae": 174.82761717502564,
+              "rmse": 246.89495278151958,
+              "mape": 2.854093811126333,
+              "r2": 0.41148240775774836
+            },
+            {
+              "fold": 2,
+              "train_size": 537,
+              "val_size": 268,
+              "mae": 969.6470587628212,
+              "rmse": 1098.0462037225582,
+              "mape": 12.563217441858107,
+              "r2": -3.890308883187717
+            },
+            {
+              "fold": 3,
+              "train_size": 805,
+              "val_size": 268,
+              "mae": 1550.1964800995022,
+              "rmse": 1778.5960748223372,
+              "mape": 14.839921350462534,
+              "r2": -2.4760767807510127
+            }
+          ]
+        },
+        "holdout_metrics": {
+          "test_mae": 663.2359656294906,
+          "test_rmse": 942.658099180752,
+          "test_mape": 7.1436997890873615,
+          "test_r2": 0.29797084636199145
+        }
+      },
+      "optimized": {
+        "hyperparameters": {
+          "max_depth": 12,
+          "max_features": 0.8,
+          "max_samples": 0.9,
+          "min_samples_leaf": 4,
+          "min_samples_split": 2,
+          "n_estimators": 250
+        },
+        "cv_metrics": {
+          "cv_mae_mean": 857.0854849286148,
+          "cv_mae_std": 572.4503602935823,
+          "cv_rmse_mean": 1002.6996536790225,
+          "cv_mape_mean": 9.511084636189665,
+          "cv_r2_mean": -1.6319362085686369,
+          "folds": [
+            {
+              "fold": 1,
+              "train_size": 269,
+              "val_size": 268,
+              "mae": 172.2718216155374,
+              "rmse": 240.00802463800972,
+              "mape": 2.8262015563167364,
+              "r2": 0.4438569031363604
+            },
+            {
+              "fold": 2,
+              "train_size": 537,
+              "val_size": 268,
+              "mae": 825.5647735969828,
+              "rmse": 962.4458343383232,
+              "mape": 10.646081105332383,
+              "r2": -2.7570558902023397
+            },
+            {
+              "fold": 3,
+              "train_size": 805,
+              "val_size": 268,
+              "mae": 1573.4198595733246,
+              "rmse": 1805.6451020607346,
+              "mape": 15.060971246919873,
+              "r2": -2.5826096386399318
+            }
+          ]
+        },
+        "holdout_metrics": {
+          "test_mae": 616.4907381602147,
+          "test_rmse": 887.5223701715802,
+          "test_mape": 6.725802192995446,
+          "test_r2": 0.37769203748471947
+        }
+      },
+      "improvements": {
+        "cv_mae_pct": 4.58,
+        "holdout_mae_pct": 7.05,
+        "holdout_rmse_pct": 5.85,
+        "holdout_mape_pct": 5.85
+      }
+    }
+  },
+  "14d": {
+    "GradientBoosting": {
+      "commodity": "Tur Dal (Latur)",
+      "commodity_key": "turdal",
+      "horizon_days": 14,
+      "algorithm": "GradientBoosting",
+      "model_artifact": "models\\optimized\\turdal\\turdal_gradientboosting_14d.pkl",
+      "trials_csv": "models\\optimized\\turdal\\search_results_gradientboosting_14d.csv",
+      "train_samples": 1073,
+      "holdout_samples": 352,
+      "features_count": 21,
+      "features": [
+        "Temperature_C",
+        "Rainfall_mm",
+        "Arrivals_Tonnes",
+        "Diesel_Price_Rs",
+        "Modal_Price",
+        "Price_Lag_1",
+        "Price_Lag_2",
+        "Price_Lag_3",
+        "Price_Lag_4",
+        "Price_Lag_5",
+        "Price_Lag_7",
+        "Price_Lag_10",
+        "Price_Lag_14",
+        "Price_Lag_21",
+        "Rolling_Mean_3d",
+        "Rolling_Mean_7d",
+        "Rolling_Mean_14d",
+        "Rolling_Std_7d",
+        "Month",
+        "DayOfWeek",
+        "DayOfYear"
+      ],
+      "timestamp": "2026-11-01 17:38:32",
+      "original": {
+        "hyperparameters": {
+          "learning_rate": 0.015,
+          "max_depth": 5,
+          "min_samples_leaf": 5,
+          "min_samples_split": 10,
+          "n_estimators": 300,
+          "subsample": 0.85
+        },
+        "cv_metrics": {
+          "cv_mae_mean": 1128.7308034141668,
+          "cv_mae_std": 691.9675621373079,
+          "cv_rmse_mean": 1273.0593451321483,
+          "cv_mape_mean": 12.70614025977875,
+          "cv_r2_mean": -3.2489324048789285,
+          "folds": [
+            {
+              "fold": 1,
+              "train_size": 269,
+              "val_size": 268,
+              "mae": 275.8000711977032,
+              "rmse": 347.3172965092508,
+              "mape": 4.4106609460315,
+              "r2": -0.015576096455138355
+            },
+            {
+              "fold": 2,
+              "train_size": 537,
+              "val_size": 268,
+              "mae": 1139.7319290565201,
+              "rmse": 1239.9835319273884,
+              "mape": 14.801314782466035,
+              "r2": -4.966786380018594
+            },
+            {
+              "fold": 3,
+              "train_size": 805,
+              "val_size": 268,
+              "mae": 1970.6604099882768,
+              "rmse": 2231.877206959806,
+              "mape": 18.906445050838716,
+              "r2": -4.764434738163054
+            }
+          ]
+        },
+        "holdout_metrics": {
+          "test_mae": 911.7947892619225,
+          "test_rmse": 1152.917410804436,
+          "test_mape": 9.2570936108174,
+          "test_r2": -0.056274484269174474
+        }
+      },
+      "optimized": {
+        "hyperparameters": {
+          "subsample": 0.85,
+          "n_estimators": 200,
+          "min_samples_split": 8,
+          "min_samples_leaf": 8,
+          "max_features": "sqrt",
+          "max_depth": 4,
+          "learning_rate": 0.08
+        },
+        "cv_metrics": {
+          "cv_mae_mean": 1055.5471101242001,
+          "cv_mae_std": 649.328771584196,
+          "cv_rmse_mean": 1194.085116929947,
+          "cv_mape_mean": 11.893334075642747,
+          "cv_r2_mean": -2.76716314078512,
+          "folds": [
+            {
+              "fold": 1,
+              "train_size": 269,
+              "val_size": 268,
+              "mae": 250.22308511105516,
+              "rmse": 318.2568189010226,
+              "mape": 4.072958923333688,
+              "r2": 0.1472630502387816
+            },
+            {
+              "fold": 2,
+              "train_size": 537,
+              "val_size": 268,
+              "mae": 1076.0681912153693,
+              "rmse": 1184.4558890217475,
+              "mape": 13.944997399907235,
+              "r2": -4.44435502973319
+            },
+            {
+              "fold": 3,
+              "train_size": 805,
+              "val_size": 268,
+              "mae": 1840.350054046176,
+              "rmse": 2079.542642867071,
+              "mape": 17.662045903687314,
+              "r2": -4.004397442860952
+            }
+          ]
+        },
+        "holdout_metrics": {
+          "test_mae": 772.1377597046575,
+          "test_rmse": 1020.2836371452153,
+          "test_mape": 8.027165054789872,
+          "test_r2": 0.17277769359985395
+        }
+      },
+      "improvements": {
+        "cv_mae_pct": 6.48,
+        "holdout_mae_pct": 15.32,
+        "holdout_rmse_pct": 11.5,
+        "holdout_mape_pct": 13.29
+      }
+    },
+    "RandomForest": {
+      "commodity": "Tur Dal (Latur)",
+      "commodity_key": "turdal",
+      "horizon_days": 14,
+      "algorithm": "RandomForest",
+      "model_artifact": "models\\optimized\\turdal\\turdal_randomforest_14d.pkl",
+      "trials_csv": "models\\optimized\\turdal\\search_results_randomforest_14d.csv",
+      "train_samples": 1073,
+      "holdout_samples": 352,
+      "features_count": 21,
+      "features": [
+        "Temperature_C",
+        "Rainfall_mm",
+        "Arrivals_Tonnes",
+        "Diesel_Price_Rs",
+        "Modal_Price",
+        "Price_Lag_1",
+        "Price_Lag_2",
+        "Price_Lag_3",
+        "Price_Lag_4",
+        "Price_Lag_5",
+        "Price_Lag_7",
+        "Price_Lag_10",
+        "Price_Lag_14",
+        "Price_Lag_21",
+        "Rolling_Mean_3d",
+        "Rolling_Mean_7d",
+        "Rolling_Mean_14d",
+        "Rolling_Std_7d",
+        "Month",
+        "DayOfWeek",
+        "DayOfYear"
+      ],
+      "timestamp": "2026-11-01 17:38:41",
+      "original": {
+        "hyperparameters": {
+          "max_depth": 12,
+          "max_features": 1.0,
+          "min_samples_leaf": 1,
+          "min_samples_split": 2,
+          "n_estimators": 300
+        },
+        "cv_metrics": {
+          "cv_mae_mean": 1053.6074700525198,
+          "cv_mae_std": 655.6575673429076,
+          "cv_rmse_mean": 1193.810396583517,
+          "cv_mape_mean": 11.830563633332593,
+          "cv_r2_mean": -2.715378025397438,
+          "folds": [
+            {
+              "fold": 1,
+              "train_size": 269,
+              "val_size": 268,
+              "mae": 256.3697858571431,
+              "rmse": 324.370430293908,
+              "mape": 4.128389193568844,
+              "r2": 0.11418677377730402
+            },
+            {
+              "fold": 2,
+              "train_size": 537,
+              "val_size": 268,
+              "mae": 1042.178358131262,
+              "rmse": 1147.6204587476066,
+              "mape": 13.506090963614243,
+              "r2": -4.110992205753592
+            },
+            {
+              "fold": 3,
+              "train_size": 805,
+              "val_size": 268,
+              "mae": 1862.274266169154,
+              "rmse": 2109.440300709037,
+              "mape": 17.857210742814694,
+              "r2": -4.149328644216027
+            }
+          ]
+        },
+        "holdout_metrics": {
+          "test_mae": 891.731176172607,
+          "test_rmse": 1131.3200483016717,
+          "test_mape": 9.089214616310295,
+          "test_r2": -0.017071208234480162
+        }
+      },
+      "optimized": {
+        "hyperparameters": {
+          "max_depth": 16,
+          "max_features": "sqrt",
+          "max_samples": null,
+          "min_samples_leaf": 4,
+          "min_samples_split": 5,
+          "n_estimators": 250
+        },
+        "cv_metrics": {
+          "cv_mae_mean": 966.1554466948702,
+          "cv_mae_std": 598.5520270263956,
+          "cv_rmse_mean": 1100.308765723379,
+          "cv_mape_mean": 10.846782144599223,
+          "cv_r2_mean": -2.176892570665783,
+          "folds": [
+            {
+              "fold": 1,
+              "train_size": 269,
+              "val_size": 268,
+              "mae": 235.81453483240486,
+              "rmse": 297.3287827048799,
+              "mape": 3.8186364452809096,
+              "r2": 0.2557247928229668
+            },
+            {
+              "fold": 2,
+              "train_size": 537,
+              "val_size": 268,
+              "mae": 960.7204413454607,
+              "rmse": 1074.3589395684328,
+              "mape": 12.408816129744055,
+              "r2": -3.479272240209311
+            },
+            {
+              "fold": 3,
+              "train_size": 805,
+              "val_size": 268,
+              "mae": 1701.9313639067452,
+              "rmse": 1929.2385748968247,
+              "mape": 16.312893858772696,
+              "r2": -3.307130264611005
+            }
+          ]
+        },
+        "holdout_metrics": {
+          "test_mae": 775.0324290113639,
+          "test_rmse": 1019.9346172937178,
+          "test_mape": 8.058994158512055,
+          "test_r2": 0.1733435511980661
+        }
+      },
+      "improvements": {
+        "cv_mae_pct": 8.3,
+        "holdout_mae_pct": 13.09,
+        "holdout_rmse_pct": 9.85,
+        "holdout_mape_pct": 11.33
+      }
+    }
+  },
+  "30d": {
+    "GradientBoosting": {
+      "commodity": "Tur Dal (Latur)",
+      "commodity_key": "turdal",
+      "horizon_days": 30,
+      "algorithm": "GradientBoosting",
+      "model_artifact": "models\\optimized\\turdal\\turdal_gradientboosting_30d.pkl",
+      "trials_csv": "models\\optimized\\turdal\\search_results_gradientboosting_30d.csv",
+      "train_samples": 1073,
+      "holdout_samples": 336,
+      "features_count": 21,
+      "features": [
+        "Temperature_C",
+        "Rainfall_mm",
+        "Arrivals_Tonnes",
+        "Diesel_Price_Rs",
+        "Modal_Price",
+        "Price_Lag_1",
+        "Price_Lag_2",
+        "Price_Lag_3",
+        "Price_Lag_4",
+        "Price_Lag_5",
+        "Price_Lag_7",
+        "Price_Lag_10",
+        "Price_Lag_14",
+        "Price_Lag_21",
+        "Rolling_Mean_3d",
+        "Rolling_Mean_7d",
+        "Rolling_Mean_14d",
+        "Rolling_Std_7d",
+        "Month",
+        "DayOfWeek",
+        "DayOfYear"
+      ],
+      "timestamp": "2026-11-01 17:38:55",
+      "original": {
+        "hyperparameters": {
+          "learning_rate": 0.015,
+          "max_depth": 5,
+          "min_samples_leaf": 5,
+          "min_samples_split": 10,
+          "n_estimators": 300,
+          "subsample": 0.85
+        },
+        "cv_metrics": {
+          "cv_mae_mean": 1365.0103608572463,
+          "cv_mae_std": 908.6611049967893,
+          "cv_rmse_mean": 1497.5629868407243,
+          "cv_mape_mean": 15.17564487111411,
+          "cv_r2_mean": -4.7689980210513525,
+          "folds": [
+            {
+              "fold": 1,
+              "train_size": 269,
+              "val_size": 268,
+              "mae": 307.90874370924945,
+              "rmse": 468.6387308159852,
+              "mape": 4.627634341116352,
+              "r2": 0.0589060653061898
+            },
+            {
+              "fold": 2,
+              "train_size": 537,
+              "val_size": 268,
+              "mae": 1260.789777956965,
+              "rmse": 1366.3583380231435,
+              "mape": 16.330501779990062,
+              "r2": -5.448082434618782
+            },
+            {
+              "fold": 3,
+              "train_size": 805,
+              "val_size": 268,
+              "mae": 2526.3325609055246,
+              "rmse": 2657.691891683045,
+              "mape": 24.568798492235917,
+              "r2": -8.917817693841465
+            }
+          ]
+        },
+        "holdout_metrics": {
+          "test_mae": 1290.59274073984,
+          "test_rmse": 1500.7564738814417,
+          "test_mape": 12.752330836704179,
+          "test_r2": -0.7432064194220822
+        }
+      },
+      "optimized": {
+        "hyperparameters": {
+          "learning_rate": 0.05,
+          "max_depth": 6,
+          "max_features": "sqrt",
+          "min_samples_leaf": 6,
+          "min_samples_split": 16,
+          "n_estimators": 450,
+          "subsample": 0.7
+        },
+        "cv_metrics": {
+          "cv_mae_mean": 1175.0282198043913,
+          "cv_mae_std": 663.7976233801386,
+          "cv_rmse_mean": 1329.9118973471043,
+          "cv_mape_mean": 13.293018670427614,
+          "cv_r2_mean": -3.5317716115548676,
+          "folds": [
+            {
+              "fold": 1,
+              "train_size": 269,
+              "val_size": 268,
+              "mae": 372.62302837819533,
+              "rmse": 519.5663778483378,
+              "mape": 5.765715891870838,
+              "r2": -0.15674783842650175
+            },
+            {
+              "fold": 2,
+              "train_size": 537,
+              "val_size": 268,
+              "mae": 1154.2706766573142,
+              "rmse": 1296.0424661087948,
+              "mape": 14.839235079261536,
+              "r2": -4.801493660228875
+            },
+            {
+              "fold": 3,
+              "train_size": 805,
+              "val_size": 268,
+              "mae": 1998.190954377664,
+              "rmse": 2174.12684808418,
+              "mape": 19.27410504015047,
+              "r2": -5.637073336009225
+            }
+          ]
+        },
+        "holdout_metrics": {
+          "test_mae": 1073.2460804458306,
+          "test_rmse": 1308.0343208083664,
+          "test_mape": 10.763730394990294,
+          "test_r2": -0.32423982400170304
+        }
+      },
+      "improvements": {
+        "cv_mae_pct": 13.92,
+        "holdout_mae_pct": 16.84,
+        "holdout_rmse_pct": 12.84,
+        "holdout_mape_pct": 15.59
+      }
+    },
+    "RandomForest": {
+      "commodity": "Tur Dal (Latur)",
+      "commodity_key": "turdal",
+      "horizon_days": 30,
+      "algorithm": "RandomForest",
+      "model_artifact": "models\\optimized\\turdal\\turdal_randomforest_30d.pkl",
+      "trials_csv": "models\\optimized\\turdal\\search_results_randomforest_30d.csv",
+      "train_samples": 1073,
+      "holdout_samples": 336,
+      "features_count": 21,
+      "features": [
+        "Temperature_C",
+        "Rainfall_mm",
+        "Arrivals_Tonnes",
+        "Diesel_Price_Rs",
+        "Modal_Price",
+        "Price_Lag_1",
+        "Price_Lag_2",
+        "Price_Lag_3",
+        "Price_Lag_4",
+        "Price_Lag_5",
+        "Price_Lag_7",
+        "Price_Lag_10",
+        "Price_Lag_14",
+        "Price_Lag_21",
+        "Rolling_Mean_3d",
+        "Rolling_Mean_7d",
+        "Rolling_Mean_14d",
+        "Rolling_Std_7d",
+        "Month",
+        "DayOfWeek",
+        "DayOfYear"
+      ],
+      "timestamp": "2026-11-01 17:39:05",
+      "original": {
+        "hyperparameters": {
+          "max_depth": 12,
+          "max_features": 1.0,
+          "min_samples_leaf": 1,
+          "min_samples_split": 2,
+          "n_estimators": 300
+        },
+        "cv_metrics": {
+          "cv_mae_mean": 1292.7775165322425,
+          "cv_mae_std": 881.7976871567046,
+          "cv_rmse_mean": 1424.9431458192096,
+          "cv_mape_mean": 14.30608458527243,
+          "cv_r2_mean": -4.1505674927631695,
+          "folds": [
+            {
+              "fold": 1,
+              "train_size": 269,
+              "val_size": 268,
+              "mae": 319.48417933005413,
+              "rmse": 470.5576738188095,
+              "mape": 4.790641951547642,
+              "r2": 0.051183259493270516
+            },
+            {
+              "fold": 2,
+              "train_size": 537,
+              "val_size": 268,
+              "mae": 1104.2384318544775,
+              "rmse": 1206.2049613554773,
+              "mape": 14.292542173851034,
+              "r2": -4.025086931485793
+            },
+            {
+              "fold": 3,
+              "train_size": 805,
+              "val_size": 268,
+              "mae": 2454.609938412196,
+              "rmse": 2598.0668022833424,
+              "mape": 23.835069630418616,
+              "r2": -8.477798806296985
+            }
+          ]
+        },
+        "holdout_metrics": {
+          "test_mae": 1294.9673581073719,
+          "test_rmse": 1502.8752750798958,
+          "test_mape": 12.790566522435359,
+          "test_r2": -0.7481320888468115
+        }
+      },
+      "optimized": {
+        "hyperparameters": {
+          "max_depth": 8,
+          "max_features": "sqrt",
+          "max_samples": 0.9,
+          "min_samples_leaf": 2,
+          "min_samples_split": 5,
+          "n_estimators": 100
+        },
+        "cv_metrics": {
+          "cv_mae_mean": 1103.6056709296936,
+          "cv_mae_std": 698.8479326231226,
+          "cv_rmse_mean": 1253.0702641408272,
+          "cv_mape_mean": 12.279968860775847,
+          "cv_r2_mean": -2.944236253720767,
+          "folds": [
+            {
+              "fold": 1,
+              "train_size": 269,
+              "val_size": 268,
+              "mae": 327.2143015893774,
+              "rmse": 473.36673968948804,
+              "mape": 5.000107710067002,
+              "r2": 0.03982123398190773
+            },
+            {
+              "fold": 2,
+              "train_size": 537,
+              "val_size": 268,
+              "mae": 962.1835871971855,
+              "rmse": 1089.0433508491806,
+              "mape": 12.343138409769901,
+              "r2": -3.0962994186428734
+            },
+            {
+              "fold": 3,
+              "train_size": 805,
+              "val_size": 268,
+              "mae": 2021.419124002518,
+              "rmse": 2196.8007018838134,
+              "mape": 19.49666046249064,
+              "r2": -5.776230576501336
+            }
+          ]
+        },
+        "holdout_metrics": {
+          "test_mae": 1044.1842249399085,
+          "test_rmse": 1266.0602067692757,
+          "test_mape": 10.498759090661231,
+          "test_r2": -0.24061515822468937
+        }
+      },
+      "improvements": {
+        "cv_mae_pct": 14.63,
+        "holdout_mae_pct": 19.37,
+        "holdout_rmse_pct": 15.76,
+        "holdout_mape_pct": 17.92
+      }
+    }
+  }
+}
